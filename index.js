@@ -43,7 +43,7 @@ i.e. is31Flavors(originalFlavors) will return TRUE.*/
 function is31Flavors(arr){
 
     console.log((arr.length === 31));
-
+return;
 }
 is31Flavors(originalFlavors);
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -60,10 +60,10 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 function addFlavor(arr,flavor){
 
   arr.unshift(flavor);
-  console.log(arr); 
+  return arr; 
 
 }
-addFlavor(originalFlavors, 'Rainbow Sherbert');
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -78,10 +78,10 @@ For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", 
 function removeLastFlavor(arr){
 
     arr.pop();
-    console.log(arr);
+    return arr;
 
 }
-removeLastFlavor(originalFlavors);
+console.log(removeLastFlavor(originalFlavors));
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
 Your function should accept:
@@ -93,10 +93,10 @@ For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", a
 
 function getFlavorByIndex(arr,index){
 
-    console.log(arr[index]);
+    return arr[index];
 
 }
-getFlavorByIndex(originalFlavors,2);
+console.log(getFlavorByIndex(originalFlavors,2));
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
 Your function should accept: 
@@ -114,10 +114,10 @@ function removeFlavorByName(arr,flavor){
 
         b = arr.indexOf(flavor);
         arr.splice(b,1);
-        console.log(arr);       
+        return arr;       
     
  }
-   removeFlavorByName(originalFlavors,'Vanilla');     
+   console.log(removeFlavorByName(originalFlavors,'Vanilla'));     
     
 
 
@@ -162,9 +162,9 @@ function filterByWord(arr,string){
         }
         
     }
-    console.log(b);
+    return b;
 }
-filterByWord(originalFlavors,'Chocolate');
+console.log(filterByWord(originalFlavors,'Chocolate'));
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
@@ -185,10 +185,10 @@ function getAverageWordLength(arr){
         words += arr[i].split(' ').length
         
     }
-    console.log(words / arr.length);
-    return;
+    return words / arr.length;
+    
 }
-getAverageWordLength(originalFlavors);
+console.log(getAverageWordLength(originalFlavors));
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
